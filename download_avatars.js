@@ -1,5 +1,11 @@
 var request = require('request');
 var secrets = require('./SECRETS.js');
+var repoOwner = process.argv[2];
+var repoName = process.argv[3];
+
+if (repoName === undefined || repoOwner === undefined){
+  return console.log("ERROR PLEASE ENTER VALID ID AND LOGIN")
+}
 
 console.log('Welcome to the GitHub Avatar Downloader!');
 
